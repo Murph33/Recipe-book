@@ -1,0 +1,29 @@
+<% if @recipe.errors.any? %>
+  <% @recipe.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+<% end %>
+
+<%= form_for @recipe do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div><br>
+  <div>
+    <%= f.label :taste %>
+    <%= f.text_field :taste %>
+  </div><br>
+  <div>
+    <%= f.label :health %>
+    <%= f.text_field :health %>
+  </div><br>
+  <div>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %>
+  </div><br>
+  <div>
+    <%= f.label :directions %>
+    <%= f.text_area :directions %>
+  </div><br>
+  <%= f.submit  %>
+<% end %>

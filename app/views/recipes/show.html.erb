@@ -1,0 +1,15 @@
+<h1>Here is ur recipe!!</h1>
+
+<%# @recipe.each do |recipe| %>
+  <div>
+<%#    <p>Food: <%= recipe.title %></p>
+<%#    <p>Taste: <%= recipe.taste %></p>
+<%#    <p>Healthiness: <%= recipe.health %></p>
+<%#    <p>Ingredients: <%= recipe.ingredients %></p>
+<%#    <p>Directions: <%= recipe.directions %></p>
+  </div>
+<%= params.inspect %>
+<%# end %>
+
+<% @recipe = Recipe.find params[:id] %>
+<%= @recipe %>

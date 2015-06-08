@@ -1,0 +1,15 @@
+<h1> The Best Recipes </h1>
+
+<% @recipes.each do |recipe| %>
+  <div>
+    <p>Food: <%= recipe.title %></p>
+    <p>Taste: <%= recipe.taste %></p>
+    <p>Healthiness: <%= recipe.health %></p>
+    <p>Ingredients: <%= recipe.ingredients %></p>
+    <p>Directions: <%= recipe.directions %></p>
+  </div>
+  <%= link_to "Recipe", recipes_path(recipe) %>
+  <%= link_to "Edit", recipe_path(recipe) %>
+  <%= link_to "Delete", recipe, method: :delete, data: {confirm: "Are you sure?"} %>
+  <hr>
+<% end %>
