@@ -8,8 +8,8 @@
     <p>Ingredients: <%= recipe.ingredients %></p>
     <p>Directions: <%= recipe.directions %></p>
   </div>
-  <%= link_to "Recipe", recipes_path(recipe) %>
-  <%= link_to "Edit", recipe_path(recipe) %>
+  <%= link_to "Recipe", recipe %>
+  <%= link_to "Edit", edit_recipe_path(recipe) %>
   <%= link_to "Delete", recipe, method: :delete, data: {confirm: "Are you sure?"} %>
   <hr>
 <% end %>
